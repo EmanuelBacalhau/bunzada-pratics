@@ -19,8 +19,8 @@ export class CreateNutritionController {
     })
 
     const body = BodySchema.parse(req.body)
-    const service = await this.nutritionService.execute(body)
+    const response = await this.nutritionService.execute(body)
 
-    res.status(201).send(service)
+    res.status(201).send(response)
   }
 }
